@@ -1,11 +1,13 @@
-import "reflect-metadata";
-import { createKoaServer } from "routing-controllers";
-import Controller from "./controller";
+import 'reflect-metadata'
+import {createKoaServer} from 'routing-controllers'
+import PageController from './pages/controller'
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4000
 
 const app = createKoaServer({
-   controllers: [Controller]
-});
+  controllers: [
+    PageController
+  ]
+})
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Listening on port ${port}`))
